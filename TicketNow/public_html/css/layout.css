@@ -1263,3 +1263,26 @@ footer .copyright  li:first-child:before {
    color: transparent;
 }
 #go-top a:hover { background-color: #0F9095; }
+
+.movieTable
+{
+    width: 750px;
+    height: 250px;
+    margin: 10px 10px 10px 0;
+    border: 3px solid #E3E3E3;
+    border-radius: 10px;
+    moz-border-radius: 10px;
+}
+
+.movieTable tr th, .movieTable tr td
+{
+    text-align: left;
+    padding: 0px 5px 0 5px;
+}
+
+.movieTable img
+{
+    padding: 0px 10px 10px 10px;
+    height: 150px;
+    width: 150px;
+}

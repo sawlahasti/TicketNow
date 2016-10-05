@@ -1,13 +1,13 @@
 <?php
 
-require 'Controller/MovieController.php';
+require ('Controller/MovieController.php');
 $movieController = new MovieController();
 
 if(isset($_POST['types'])) {
-        $movieTables = $movieController->CreateMovieTable($_POST[types]);
+        $movieTables = $movieController->CreateMovieTables($_POST[types]);
 }
 else {
-        $movieTables = $movieController->CreateCoffeeTables('%'); 
+        $movieTables = $movieController->CreateMovieTables('%'); 
 }
 
 $title = 'Movie Overview';

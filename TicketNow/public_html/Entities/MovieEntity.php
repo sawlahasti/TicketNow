@@ -1,4 +1,4 @@
-<? php
+<?php
 
 class MovieEntity {
         public $ID;
@@ -9,7 +9,7 @@ class MovieEntity {
         public $Rating;
         public $Image;
 
-        function __construct($ID, $Name, $Description, $Date; $Language, $Rating, $Image) {
+        function __construct($ID, $Name, $Description, $Date, $Language, $Rating, $Image) {
                 $this->ID = $ID ;
                 $this->Name = $Name;
                 $this->Description = $Description;

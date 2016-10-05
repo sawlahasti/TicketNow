@@ -1,6 +1,6 @@
-<? php
+<?php
 
-require ("Entities/MovieEntity.php");
+require ('Entities/MovieEntity.php');
 
 class MovieModel {
         
@@ -27,7 +27,7 @@ class MovieModel {
                 mysql_connect($host, $user, $passwd) or die(mysql_error());
                 mysql_select_db($database);
                 
-                $query = "SELECT * FROM Movie WHERE type LIKE '$type'";
+                $query = "SELECT * FROM Movie WHERE Description LIKE '$type'";
                 $result = mysql_query($query) or die(mysql_error());
                 $movieArray = array();
 

@@ -246,7 +246,7 @@ $content = '<section id="info">
 
       </div>
 
-   </section>'
+   </section>';
 
 include 'template.php';
 ?>

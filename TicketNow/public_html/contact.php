@@ -67,7 +67,7 @@ $content = '<div id="page-title">
 
             </section> 
 
-         </div>'
+         </div>';
 include 'template.php';
 ?>
 

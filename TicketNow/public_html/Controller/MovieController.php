@@ -1,6 +1,6 @@
-<? php
+<?php
 
-require ("Model/MovieModel.php");
+require 'Model/MovieModel.php';
 
 class MovieController {
 
@@ -37,7 +37,7 @@ class MovieController {
                         $result = $result.
                                 "<table class = 'movieTable'>
                                         <tr>
-                                                <th rowspan='6' width = '150px'><img runat = 'server' src = '$movie->image' /></th>
+                                                <th rowspan='6' width = '150px'><img runat = 'server' src = '$movie->Image' /></th>
                                                 <th width = '75px' >Name: </th>
                                                 <td>$movie->Name</td>
                                         </tr>
