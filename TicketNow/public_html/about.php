@@ -1,5 +1,5 @@
 <?php
-$title = "About";
+$title = "About Us";
 $content = '<div id="page-title">
 
       <div class="row">

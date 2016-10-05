@@ -33,9 +33,8 @@ class MovieController {
                 $movieArray = $movieModel->GetMovieByType($types);
                 $result = "";
 
-                foreach($movieArray as $kay => $movie) {
-                        $result = $result.
-                                "<table class = 'movieTable'>
+                foreach($movieArray as $key => $movie) {
+                        $result .= "<table class = 'movieTable'>
                                         <tr>
                                                 <th rowspan='6' width = '150px'><img runat = 'server' src = '$movie->Image' /></th>
                                                 <th width = '75px' >Name: </th>

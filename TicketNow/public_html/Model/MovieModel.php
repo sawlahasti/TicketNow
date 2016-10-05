@@ -38,13 +38,12 @@ class MovieModel {
                         $Language = $row[4];
                         $Rating = $row[5];
                         $Image = $row[6];
-
                         $movie = new MovieEntity(-1,$Name,$Description,$Date,$Language,$Rating,$Image);
                         array_push($movieArray, $movie);
-
-                        mysql_close();
-                        return $movieArray;
                 }
+
+                mysql_close();
+                return $movieArray;
         }
 }
 
