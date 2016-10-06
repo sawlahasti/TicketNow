@@ -1,6 +1,38 @@
 <?php
 $title = "TicketNow";
-$content = '<section id="info">
+$content = '<section id="intro">
+ <div id="intro-slider" class="flexslider">
+   <ul class="slides">
+     <li>
+       <div class="row">
+         <div class="twelve columns">
+           <div class="slider-text">
+             <h1>Book Your Movie Tickets NOW!<span>.</span></h1>
+             <p>Book your tickets from anywhere, anytime, in a flash!</p>
+           </div>
+                 <div class="slider-image">
+                    <img src="http://placehold.it/882x332" alt="" />
+                 </div>
+         </div>
+       </div>
+     </li>
+     <li>
+       <div class="row">
+         <div class="twelve columns">
+           <div class="slider-text">
+             <h1>Events Nearby<span>.</span></h1>
+             <p>Always wanted to attend that show? Get your tickets right NOW!</p>
+           </div>
+                 <div class="slider-image">
+                    <img src="http://placehold.it/882x332" alt="" />
+                 </div>
+         </div>
+       </div>
+     </li>
+  </ul>
+ </div> 
+</section>
+<section id="info">
 
       <div class="row">
 
