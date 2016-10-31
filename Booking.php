@@ -1,7 +1,7 @@
 <?php
 //reponsible for the booking  and update cart nwBooking table with booking details
 
-session_start();
+//session_start();
 require_once 'login.php';
 include 'cart.php';
 // ini_set('session.cache_limiter', 'private'); 
