@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'login.php';
 $sessionId = session_id();
 // include 'menu.php';
