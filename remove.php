@@ -3,7 +3,7 @@ require_once 'login.php';
 require_once 'createTemp.php';
 // require_once 'booking.php';
 include 'cart.php';
-include 'navigation.php';
+//include 'navigation.php';
 /* ini_set('session.cache_limiter', 'private'); */
 session_start();
 $sessionId = session_id();
@@ -20,51 +20,19 @@ echo <<<_END
   <script src="js/modernizr.js"></script>
 </head>
 <body>
-   <header>
-   
-         <div class="row">
-         
-                  <div class="twelve columns">
-                  
-                              <div class="logo">
-                                             <a href="index.html"><img alt="" src="images/logo1.png"></a>
-                                                         </div>
-                                                         
-                                                                     <nav id="nav-wrap">
-                                                                     
-                                                                                    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-                                                                                                  <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-                                                                                                  
-                                                                                                                 <ul id="nav" class="nav">
-                                                                                                                 
-                                                                                                                                  <li class="current"><a href="index.html">Home</a></li>
-                                                                                                                                                   <li><span><a href="#">Movies</a></span>
-                                                                                                                                                                        <ul>
-                                                                                                                                                                                                <li><a href="index.php#chooseseat">In Theatres</a></li>
-                                                                                                                                                                                                                        <!-- <li><a href="here.html">Coming Soon</a></li> -->
-                                                                                                                                                                                                                                             </ul>
-                                                                                                                                                                                                                                                               </li>
-                                                                                                                                                                                                                                                                                <!--  <li><span><a href="#">Events</a></span>
-                                                                                                                                                                                                                                                                                                     <ul>
-                                                                                                                                                                                                                                                                                                                             <li><a href="#">Live</a></li>
-                                                                                                                                                                                                                                                                                                                                                     <li><a href="#">Coming Soon</a></li>
-                                                                                                                                                                                                                                                                                                                                                                          </ul>
-                                                                                                                                                                                                                                                                                                                                                                                            </li>--> 
-                                                                                                                                                                                                                                                                                                                                                                                                             <li><a href="about.html">About</a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                               <li><a href="contact.html">Contact</a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                 <li><span><a href="#">You</a></span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li><a href="log_on.php">Login</a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <li><a href="validate_reg_input.php">Register</a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li><a href="view_orders.php">Bookings</a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul> 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </nav> 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-         </div>
-      </div>
-
+<header>
+<div class="row">
+<div class="twelve columns">
+<div class="logo">
+<a href="index.html"><img alt="" src="images/logo1.png"></a>
+</div>
+<nav id="nav-wrap">
+<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+<ul id="nav" class="nav">  
+<li class="current"><a href="index.html">Home</a></li>
+<li><span><a href="#">Movies</a></span>
+<ul> </div>
    </header> 
 <div id="page-title">
 
@@ -79,9 +47,6 @@ echo <<<_END
    </div>
 <div class = "row">
 </div>
-<form method="post" action="index.php">
-<input type="submit" value='Change Selection'/>
-  </form>
 <section id="journal">
 
       <div class="row">
@@ -135,10 +100,10 @@ _END;
 			 	 		        
      else {          			    
 		     	
-		   echo " unable to delete from cart";
+		   echo " Unable to delete from cart";
 		}
 		
-		   echo " go to home page for booking ";
+		   echo " Go to home page for booking ";
 
 	  }
 	
@@ -164,7 +129,7 @@ echo <<<_END
 
             <ul class="footer-nav">
       <li><a href="#">Home</a></li>
-              <li><a href="index.php#chooseseat">Movies</a></li>
+              <li><a href="bookseats.php#chooseseat">Movies</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
                 <li><a href="view_orders.php">You</a></li>

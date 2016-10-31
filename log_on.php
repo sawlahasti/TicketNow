@@ -36,7 +36,7 @@ echo <<<_END2
                  <li class="current"><a href="index.html">Home</a></li>
                  <li><span><a href="#">Movies</a></span>
                      <ul>
-                        <li><a href="index.php#chooseseat">In Theatres</a></li>
+                        <li><a href="bookseats.php#chooseseat">In Theatres</a></li>
                         <!-- <li><a href="here.html">Coming Soon</a></li> -->
                      </ul>
                   </li>
@@ -214,7 +214,7 @@ function validatePassword(field) {
 
             <ul class="footer-nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="index.php#chooseseat">Movies</a></li>
+                <li><a href="bookseats.php#chooseseat">Movies</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="view_orders.php">You</a></li>

@@ -1,11 +1,11 @@
 <?php
 /*
 
-this a naive theatre booking system it allow users to select from list of perfomance and theatre area which are displayed on the home page -bookseats.php
+This a naive theatre booking system it allow users to select from list of perfomance and theatre area which are displayed on the home page -bookseats.php
 after selecting  one area and performance users are shown list of seats available in that area .The user can book as many seats as they wish but one seat at a time.
 The selected seat is then added to basket and seats are shown to the user for confirmation as they are added to cart.user can then decide to cancel or confirm the booking .
 if confirmed the system offers user options of printing ticket or cancelling the booking. 
-if cancel is selected recorded are deleted from both the Booking table and nwBooking table .nwBooking table is temporal table that is use to store the cart before confirmation of booking selected item are stored in this table.After confirmation of booking records are updated on nwBooking and inserted into Booking table e.g names are upadated with real names suplied by user  .if cancel depending on the stage the records are delected from the nwBooking table or/and Booking table.
+if cancel is selected recorded are deleted from both the Booking table and nwBooking table .nwBooking table is temporal table that is use to store the cart before confirmation of booking selected item are stored in this table.After confirmation of booking records are updated on nwBooking and inserted into Booking table e.g names are upadated with real names suplied by user.If cancel depending on the stage the records are delected from the nwBooking table or/and Booking table.
 this system is still very naive ..
 */
 
