@@ -7,7 +7,7 @@ include 'navigation.php';
 /* ini_set('session.cache_limiter', 'private'); */
 session_start();
 $sessionId = session_id();
-echo <<<_END
+/*echo <<<_END
         <!DOCTYPE html>
         <html class="no-js" lang="en">
 <head>
@@ -94,7 +94,9 @@ echo <<<_END
       <article class="row entry">
 
             <div class="entry-header">
-_END
+            _END
+
+ */
             try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);
          if (isset($_SESSION['name']))
 		 {	

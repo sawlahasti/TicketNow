@@ -1,7 +1,5 @@
 <?php
-
-			 		 echo<<<_END1
-
+echo<<<_END1
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
