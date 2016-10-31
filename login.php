@@ -1,8 +1,8 @@
 <?php
 //login details
 //remote login details
-$host = 'us-cdbr-iron-east-04.cleardb.net/heroku_61d99bfa265282c';
-$dbname = '2227060_bookdb';
+$host = 'us-cdbr-iron-east-04.cleardb.net';
+$dbname = 'heroku_61d99bfa265282c';
 $user = 'bf48dddc121d4f';
 $pwd = '64a9add4'; 
 
