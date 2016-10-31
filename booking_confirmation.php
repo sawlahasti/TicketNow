@@ -140,7 +140,7 @@ if (checkset())
         $count = $st->rowCount();
       if($count>0 )
       {
-        echo "here3";
+//        echo "here3";
        /*check if customer already  known  */
        $sql="select cus_Id FROM Customer where email = '$email'";
        $statement = $conn->prepare($sql);
@@ -156,14 +156,14 @@ if (checkset())
             $st->execute();
       }
        //generate order ID  for the transaction*/
-      echo "here1";
+  //    echo "here1";
        $sql="insert into Orders(cus_Id,email,trans_date) values((select cus_Id from Customer where email= '$email'),'$email',CURDATE())";
-       echo $sql;
+    //   echo $sql;
        $statement = $conn->prepare($sql);
              $statement->execute();
        //retrieve cusId and order Id
        $orderId="";
-       echo "here1";
+      // echo "here1";
        $cusId ="";
        $sqlx = "select max(order_Id) AS orderId ,cus_Id AS cusId from Orders where email='$email' group by cus_Id ";
        if ($res = $conn->query($sqlx))

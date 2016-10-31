@@ -8,7 +8,7 @@ require_once 'login.php';
 include 'cart.php';
 // ini_set('session.cache_limiter', 'private'); 
 $sessionId= session_id();
-echo "here ".$sessionId;
+//echo "here ".$sessionId;
 
 // if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
 // echo "Refreshed ".$_SESSION['counter']++." times.<br>
@@ -104,7 +104,7 @@ _END1;
 
 try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);
    if(isset($_SESSION['name']))
-echo $_SESSION['name']."hereri   ".$_SESSION['title'];     
+//echo $_SESSION['name']."hereri   ".$_SESSION['title'];     
 
 $_SESSION['name'] == "" ? 
    $username =$sessionId:
