@@ -104,7 +104,8 @@ _END1;
 
 try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);
    if(isset($_SESSION['name']))
-echo $_SESSION['name']."herer";     
+echo $_SESSION['name']."hereri   ".$_SESSION['title'];     
+
 $_SESSION['name'] == "" ? 
    $username =$sessionId:
     $username=$_SESSION['name'];
