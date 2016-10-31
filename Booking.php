@@ -1,12 +1,14 @@
 <?php
 //reponsible for the booking  and update cart nwBooking table with booking details
 
-//session_start();
+if (!isset($_SESSION)) { session_start(); }
+
+
 require_once 'login.php';
 include 'cart.php';
 // ini_set('session.cache_limiter', 'private'); 
 $sessionId= session_id();
-//echo "here ".$sessionId;
+echo "here ".$sessionId;
 
 // if (!isset($_SESSION['counter'])) $_SESSION['counter']=0;
 // echo "Refreshed ".$_SESSION['counter']++." times.<br>
@@ -102,9 +104,10 @@ _END1;
 
 try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);
    if(isset($_SESSION['name']))
-     //$_SESSION['name'] == "" ? 
-   $username =$sessionId;
-   // $username=$_SESSION['name'];
+echo $_SESSION['name']."herer";     
+$_SESSION['name'] == "" ? 
+   $username =$sessionId:
+    $username=$_SESSION['name'];
 	if(isset($_SESSION['title'])&& isset($_SESSION['date'] )&& isset($_SESSION['area'] ))	{
 		 $titlev = $_SESSION['title'];
 		 $datev = $_SESSION['date'];
