@@ -178,7 +178,7 @@ echo <<<_END
 
             <ul class="copyright">
                <li>Copyright &copy; 2016 TicketNow</li> 
-               <li>Design by <a target=blank href="http://www.somaiya.edu/kjsce/">DHV</a></li>               
+               <li>Design by <a target=blank href="http://www.somaiya.edu/kjsce/">vedipen</a></li>               
             </ul>
 
          </div>
