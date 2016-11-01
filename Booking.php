@@ -1,4 +1,4 @@
-vedipen<?php
+<?php
 //reponsible for the booking  and update cart nwBooking table with booking details
 
 if (!isset($_SESSION)) { session_start(); }
