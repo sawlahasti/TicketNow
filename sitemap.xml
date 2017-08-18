@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://ticket-now.vedipen.com/</loc>
+  <lastmod>2016-11-01T21:26:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/index.html</loc>
+  <lastmod>2016-11-01T21:26:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/bookseats.php</loc>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/about.html</loc>
+  <lastmod>2016-11-01T21:26:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/contact.html</loc>
+  <lastmod>2016-11-01T21:26:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/log_on.php</loc>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/validate_reg_input.php</loc>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/view_orders.php</loc>
+  <lastmod>2016-11-01T21:26:23+00:00</lastmod>
+</url>
+<url>
+  <loc>http://ticket-now.vedipen.com/showcart.php</loc>
+</url>
+</urlset>
