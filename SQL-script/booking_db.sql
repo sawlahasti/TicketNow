@@ -83,7 +83,7 @@ CREATE TABLE `Customer` (
 -- Dumping data for table `Customer`
 --
 
-INSERT INTO `Customer` (`cus_Id`, `name`, `address`, `email`) VALUES
+-- INSERT INTO `Customer` (`cus_Id`, `name`, `address`, `email`) VALUES
 
 
 -- --------------------------------------------------------
@@ -159,7 +159,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_Id`, `cus_Id`, `email`, `trans_date`) VALUES
-(108, 74, 'dfgdfgdg@sdfsd.com', '2016-10-20'),
+(108, 74, 'dfgdfgdg@sdfsd.com', '2016-10-20');
 
 -- --------------------------------------------------------
 
