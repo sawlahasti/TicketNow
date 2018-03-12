@@ -11,7 +11,7 @@ this system is still very naive ..
 
 session_start();
 require_once 'login.php';
-ini_set('session.cache_limiter', 'private');
+// ini_set('session.cache_limiter', 'private');
 $sessionId = session_id();
 if (isset($_SESSION['name']))
 $username = $_SESSION['name'];
@@ -71,6 +71,10 @@ catch(PDOException $e)
   <link rel="stylesheet" href="css/default.css">
   <link rel="stylesheet" href="css/layout.css">
   <script src="js/modernizr.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 </head>
 <body>
    <header>
@@ -224,13 +228,13 @@ _END1;
 try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);	 
     
     $tempname = "select name from tarea order by name";
-	$sql = " select title ,DATE(date_time) AS DATE,TIME(date_time) AS TIME from Performance order by DATE ,TIME ";
+	//$sql = " select title ,DATE(date_time) AS DATE,TIME(date_time) AS TIME from Performance order by DATE ,TIME ";
 	// echo "  Theater Perfomance Times " .'<br />';
 	// echo "<table CELLPADDING=4> <tr><th>Performance</th><th>Date</th>  <th>Time</th>";
 	echo "<article class='row entry choose'>
 
             <div class='entry-header'>
-               <div class='ten columns entry-title pull-right'>Select Venue - <select name = 'area' >";
+               <div class='ten columns entry-title pull-right'>Select Venue - <select name = 'area' id = 'sel_venue'>";
 	foreach ($conn->query($tempname) as $row)	
 	{
 
@@ -243,9 +247,9 @@ try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);
    {
 	echo $e->getMessage();
   }
-try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);	 
+// try {$conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pwd);	 
     
-    $sql1 = "select title ,DATE(date_time) AS DATE,TIME(date_time) AS TIME from Performance order by DATE ,TIME ";
+//     $sql1 = "select title ,DATE(date_time) AS DATE,TIME(date_time) AS TIME from Performance order by DATE ,TIME ";
 	// echo "  Theater Perfomance Times " .'<br />';
 	// echo "<table CELLPADDING=4> <tr><th>Performance</th><th>Date</th>  <th>Time</th>";
 	
@@ -253,17 +257,46 @@ echo <<<_END
 <!-- default to popular show large area -->
   <div class='entry-header'><div class='ten columns entry-title pull-right'>
   Select Date and Time -
-  <select name ="date">
+  <select name ="date", id="sel_date_time">
 _END;
-foreach ($conn->query($sql1) as $row1)	
-	{
+// foreach ($conn->query($sql1) as $row1)	
+// 	{
 
-			$originalDate = $row1['DATE'];
-			$time =$row1['TIME'];
-			$temp = $originalDate." "." ".$time;
-			echo "<option value='$temp'>".formatDate($originalDate)." - ".formatTime($time)."</option>";
-	}
+// 			$originalDate = $row1['DATE'];
+// 			$time =$row1['TIME'];
+// 			$temp = $originalDate." "." ".$time;
+// 			echo "<option value='$temp'>".formatDate($originalDate)." - ".formatTime($time)."</option>";
+// 	}
 echo <<<_END
+<script>
+  $(document).ready(function() {
+    $("#sel_venue").change(function() {
+      var ven_name = $(this).val();
+      $.ajax({
+        url: 'getTimings.php',
+        type: "GET",
+        data: {venue: ven_name},
+        dataType: 'JSON',
+        success:function(response) {
+          // alert(response.length);
+          var len = response.length;
+          $("#sel_date_time").empty();
+          for( var i = 0; i<len; i++) {
+            var dt = response[i].date_time;
+            // alert(dt);
+            var fin_str = "<option value='dt'>" + dt + "</option>";
+            $("#sel_date_time").append(fin_str)
+          }
+        },
+        error: function(response) {
+          alert(response.status);
+        }
+      })
+    })
+  });
+</script>
+// _END;
+// echo <<<_END
 
 </select>
 <input type ="submit"  value="Show Seats" />
@@ -294,7 +327,7 @@ echo <<<_END
 
             <ul class="copyright">
                <li>Copyright &copy; 2016 TicketNow</li> 
-               <li>Design by <a target=blank href="http://www.somaiya.edu/kjsce/">vedipen</a></li>               
+               <li>Design by <a target=blank href="http://www.somaiya.edu/kjsce/">Viraj & Hasti</a></li>               
             </ul>
 
          </div>
@@ -314,13 +347,11 @@ echo <<<_END
 
 </body>
 
-</html>
 _END;
-}
-catch (PDOException $e)
-   {
-	echo $e->getMessage();
-  }
+// } catch (PDOException $e)
+//    {
+// 	echo $e->getMessage();
+//   }
 
 
 // security for sql injection
@@ -374,4 +405,6 @@ return $var[0];
 return "";
 }
 
+echo "</html>"
 ?>
+
